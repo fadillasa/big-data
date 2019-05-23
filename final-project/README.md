@@ -47,6 +47,6 @@ Clustering Engine menggunakan dataset __Crime in Los Angeles__ (https://www.kagg
     Menampilkan hasil cluster model 2 dari suatu input \
     ![Get Cluster Model 2](./img/2_get_cluster.png)
     
-  * __[GET] http://IP_SERVER:5432/model1/{c_id}/cluster \
+  * __[GET] http://IP_SERVER:5432/model3/{c_id}/cluster \
     Menampilkan hasil cluster model 3 dari suatu input \
     ![Get Cluster Model 3](./img/3_get_cluster.png)
