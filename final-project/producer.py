@@ -11,9 +11,9 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
 dataset_folder_path = os.path.join(os.getcwd(), 'dataset')
 dataset_file_path = os.path.join(dataset_folder_path, 'crime-data-final.csv')
 
-data_limit = 500000 #jumlah data per model
-counter = 0     #counter baris
-model_limit = 3 #jumlah model
+data_limit = 1000       #jumlah data per model
+counter = 0             #counter baris
+model_limit = 3         #jumlah model
 
 with open(dataset_file_path,"r", encoding="utf-8") as f:
     for row in f:

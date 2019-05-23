@@ -10,9 +10,9 @@ consumer = KafkaConsumer(
      value_deserializer=lambda x: loads(x.decode('utf-8')))
 
 folder_path = os.path.join(os.getcwd(), 'dataset')
-data_limit = 500000 #jumlah data per model
-counter = 1         #counter baris
-model_limit = 3     #jumlah model
+data_limit = 1000       #jumlah data per model
+counter = 0             #counter baris
+model_limit = 3         #jumlah model
 model_number = 1
 
 try:
@@ -29,7 +29,7 @@ try:
                 writefile.close()
                 break
             if counter == 1:
-                file_path = os.path.join(folder_path, ('model-' + str(model_number) + '.txt'))
+                file_path = os.path.join(folder_path, ('model' + str(model_number) + '.txt'))
                 writefile = open(file_path, "w", encoding="utf-8")
             message = message.value
             writefile.write(message)
